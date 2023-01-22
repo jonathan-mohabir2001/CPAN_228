@@ -7,8 +7,8 @@
   each lab. 
  */
 package com.cpan252.tekkenreborn.controller;
+//neccessary imports for the controller class.
 import org.springframework.stereotype.Controller;
-// ensure the controller component is imported. 
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -18,10 +18,8 @@ public class HomeController {
   public String home() {
     return "home";
   }
-  //this method returns a home page with the message Home.
-}
+// ROUTE FOR / PAGE which shows the home html page.
 
-/*
- * The controller acts as a dispatcher for the application. 
- * Endpoint is the URL that the user will type in to access the application.
- */
+
+
+}
