@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TekkenrebornApplication {
 
+
+    // main method to start off the application
 	public static void main(String[] args) {
 		SpringApplication.run(TekkenrebornApplication.class, args);
 	}
