@@ -5,9 +5,12 @@ import lombok.Data;
 // import statement for lombok library
 // POM contains this depency
 
+
 @Data
 // import the lombok library to generate getters and setters
 @Builder
+
+
 
 public class Fighter {
 
@@ -20,14 +23,14 @@ public class Fighter {
   public enum Anime {
     NARUTO("Naruto"), BLEACH("Bleach"), ONE_PIECE("One Piece"), TEKKEN("Tekken");
 
-    private String name;
+    private String title;
 
-    private Anime(String name) {
-      this.name = name;
+    private Anime(String title) {
+      this.title= title;
     }
 
-    public String getName() {
-      return name;
+    public String getTitle() {
+      return title;
     }
   }
 }
