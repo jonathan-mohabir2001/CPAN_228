@@ -18,6 +18,8 @@ public class FighterPool {
 
   }
 
+  // random message 
+
   public void addFighter(Fighter fighter) {
     this.fighters.add(fighter);
   }
