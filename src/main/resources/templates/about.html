@@ -13,12 +13,12 @@
   </head>
 
   <body class="bg-body-tertiary">
-    <header>
+    <header id="header">
       <h1>WELCOME TO THE SPRING APP</h1>
       <h3>CPAN 228 Spring Boot Application development.</h3>
     </header>
 
-    <section>
+    <section id="content">
       <h3>This app was created through the Spring Initializer Tool.</h3>
 
       <p>
@@ -36,7 +36,7 @@
       >
     </section>
 
-    <footer>
+    <footer id="footer">
       <dl>
         <dt>Created by Jonathan Mohabir.</dt>
         <dd></dd>
@@ -44,5 +44,26 @@
         <dd>SPRING, JAVA, CPAN_228</dd>
       </dl>
     </footer>
+
+    <style>
+      #header {
+        text-align: center;
+        background-color: darkgray;
+        color: #fff;
+        padding: 10px;
+      }
+
+      #content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      #footer {
+        text-align: center;
+        background-color: darkgray;
+        color: #fff;
+        padding: 10px;
+      }
+    </style>
   </body>
 </html>
