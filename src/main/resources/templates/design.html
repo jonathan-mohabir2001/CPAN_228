@@ -31,7 +31,7 @@
             name="name"
           />
         </div>
-
+        <br />
         <div class="form-group">
           <label for="damagePerHit">Damage Per Hit</label>
           <input
@@ -42,7 +42,7 @@
             required
           />
         </div>
-
+        <br />
         <div class="form-group">
           <label for="health">Health</label>
           <input
@@ -53,7 +53,7 @@
             required
           />
         </div>
-
+        <br />
         <div class="form-group">
           <label for="resistance">Resistance</label>
           <input
@@ -61,18 +61,28 @@
             class="form-control rounded-pill"
             id="resistance"
             name="resistance"
+            required
           />
         </div>
 
+        <br />
+        <!--Anime Selection group from created Java Class. -->
         <div class="form-group">
           <label for="animeFrom">Anime From</label>
-          <input
-            type="text"
-            class="form-control rounded-pill"
-            id="animeFrom"
-            name="animeFrom"
-          />
+
+          <select>
+            <option
+              th:each="Anime : ${animes}"
+              value="${Anime}"
+              th:text="${Anime}"
+            ></option>
+            <!--For each anime character in the set loop through them and display them out to the frontend-->
+          </select>
         </div>
+
+        <button type="submit" class="btn btn-primary rounded-pill">
+          Submit
+        </button>
       </form>
     </div>
 
