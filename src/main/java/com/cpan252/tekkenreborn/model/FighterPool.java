@@ -24,6 +24,9 @@ public class FighterPool {
   public void addFighter(Fighter fighter) {
     this.fighters.add(fighter);
   }
+
+  public void add(Fighter fighter) {
+  }
   // This is a method that adds a fighter to the list of fighters
 
 }

@@ -21,13 +21,17 @@
       class="d-flex align-items-center justify-content-center"
       style="height: 80vh"
     >
-      <form class="p-3 bg-light rounded">
+      <form class="p-3 bg-light rounded" method="post" th:object="${fighter}">
+        <!--Data is binding to Java backend through ThymeLeaf utilization
+        use the th:field to bind the data to the backend from input fields.
+        -->
         <div class="form-group">
           <label for="name">Name</label>
           <input
             type="text"
             class="form-control rounded-pill"
             id="name"
+            th:field="*{name}"
             name="name"
           />
         </div>
@@ -38,6 +42,7 @@
             type="number"
             class="form-control rounded-pill"
             id="damagePerHit"
+            th:field="*{damagePerHit}"
             name="damagePerHit"
             required
           />
@@ -49,6 +54,7 @@
             type="number"
             class="form-control rounded-pill"
             id="health"
+            th:field="*{health}"
             name="health"
             required
           />
@@ -60,6 +66,7 @@
             type="number"
             class="form-control rounded-pill"
             id="resistance"
+            th:field="*{resistance}"
             name="resistance"
             required
           />
@@ -75,6 +82,7 @@
               th:each="Anime : ${animes}"
               value="${Anime}"
               th:text="${Anime}"
+              th:field="*{animeFrom}"
             ></option>
             <!--For each anime character in the set loop through them and display them out to the frontend-->
           </select>
