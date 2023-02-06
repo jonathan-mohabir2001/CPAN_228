@@ -1,38 +1,27 @@
-/*
-LAB 03 commits: 
-
- * Fighter Model updated to include a unique identifier for each fighter, and a timestamp for when created in the database.
- * JDBC implementations. 
- */
-
 package com.cpan252.tekkenreborn.model;
-import java.util.Date;
+
 import lombok.Builder;
 import lombok.Data;
+
+// The Data annotation from Lombok generates getters, setters, toString, hashCode, and equals methods for the class based on the fields
+// The Builder annotation generates a Builder pattern class, which provides a more readable way of constructing objects.
 @Data
 @Builder
 public class Fighter {
+  // Fields for Fighter table in database
 
-  private Long id; 
-  // lab 03 distinction: this is a Long instead of a String because it is a unique identifier
-  // this data field gives a unique identifier to each fighter for the database
-  @NotBlank
+  // LAB-02 updates, the notblank annotation is used to validate that each field
+  // is not blank
+
   private String name;
 
-  @NotBlank
   private int damagePerHit;
 
-  @NotBlank
   private int health;
 
-  @NotBlank
   private double resistance;
 
   private Anime animeFrom;
-
-  private final Date createdAt = new Date(); 
-  // timestamp when a new fighter is created for resolving conflicts in the database. 
-  //lab 03 addition. 
 
   public enum Anime {
     // Enum representing different anime series that fighters can belong to
@@ -47,5 +36,9 @@ public class Fighter {
     public String getTitle() {
       return title;
     }
+  }
+
+  public static Object builder() {
+    return null;
   }
 }
