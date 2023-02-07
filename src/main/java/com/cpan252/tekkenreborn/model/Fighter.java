@@ -3,16 +3,18 @@ package com.cpan252.tekkenreborn.model;
 import lombok.Builder;
 import lombok.Data;
 
-// The Data annotation from Lombok generates getters, setters, toString, hashCode, and equals methods for the class based on the fields
-// The Builder annotation generates a Builder pattern class, which provides a more readable way of constructing objects.
+
 @Data
 @Builder
 public class Fighter {
-  // Fields for Fighter table in database
 
+<<<<<<< HEAD
   // LAB-02 updates, the notblank annotation is used to validate that each field
   // is not blank
 
+=======
+  @NotBlank
+>>>>>>> oldSnapShot
   private String name;
 
   private int damagePerHit;
@@ -24,7 +26,7 @@ public class Fighter {
   private Anime animeFrom;
 
   public enum Anime {
-    // Enum representing different anime series that fighters can belong to
+
     NARUTO("Naruto"), BLEACH("Bleach"), ONE_PIECE("One Piece"), TEKKEN("Tekken");
 
     private String title;
