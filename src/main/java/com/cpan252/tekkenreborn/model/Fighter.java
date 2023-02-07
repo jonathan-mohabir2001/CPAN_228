@@ -3,26 +3,19 @@ package com.cpan252.tekkenreborn.model;
 import lombok.Builder;
 import lombok.Data;
 
-
 @Data
 @Builder
 public class Fighter {
 
-<<<<<<< HEAD
-  // LAB-02 updates, the notblank annotation is used to validate that each field
-  // is not blank
-
-=======
   @NotBlank
->>>>>>> oldSnapShot
   private String name;
-
+  @NotBlank
   private int damagePerHit;
-
+  @NotBlank
   private int health;
-
+  @NotBlank
   private double resistance;
-
+  @NotBlank
   private Anime animeFrom;
 
   public enum Anime {
