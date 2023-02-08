@@ -1,13 +1,19 @@
 package com.cpan252.tekkenreborn.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
 import lombok.Builder;
 import lombok.Data;
 
-
 @Data
 @Builder
-public class Fighter {
 
+@Table
+public class Fighter {
+  @Id
+  private Long id;
+  // new field for the fighters id.
   @NotBlank
   private String name;
 
