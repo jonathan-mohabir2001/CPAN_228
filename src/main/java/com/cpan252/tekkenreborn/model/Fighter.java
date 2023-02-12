@@ -40,7 +40,4 @@ public class Fighter {
     }
   }
 
-  public static Object builder() {
-    return null;
-  }
 }
